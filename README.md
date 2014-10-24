@@ -23,7 +23,7 @@ Create a fork of this repository at bitbucket + give the bitbucket user megusta-
 ----------
 ## task 3 - node ##
 * checkout branch task/3_node
-* value 8h
+* value 10h
 
 
 ----------
