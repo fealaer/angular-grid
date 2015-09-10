@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Grid Page</title>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
+	<!--<script src="assets/bootstrap.min.js"></script>-->
+</head>
+<body>
+<div class="container">
+	<div class="panel panel-info">
+		<div class="panel-heading">Grid #1</div>
+		<div class="panel-body">
+			<table class="table">
+				<thead>
+				<tr>
+					<th>Username</th>
+					<th>Description</th>
+					<th>Details</th>
+					<th>Email</th>
+					<th>Active</th>
+					<th>Locked</th>
+				</tr>
+				</thead>
+				<tfoot>
+				<tr>
+					<th>Username</th>
+					<th>Description</th>
+					<th>Details</th>
+					<th>Email</th>
+					<th>Active</th>
+					<th>Locked</th>
+				</tr>
+				</tfoot>
+				<tbody>
+				<tr>
+					<td>
+						<div class="input-group">
+							<input type="text" class="form-control" name="username-filter" aria-label="Username Filter">
+							<span class="input-group-btn">
+								<button type="button" class="btn btn-default" aria-label="Username Sort">
+									<span class="glyphicon glyphicon-sort" aria-hidden="true"></span>
+								</button>
+							</span>
+						</div>
+					</td>
+					<td>
+						<div class="input-group">
+							<input type="text" class="form-control" name="description-filter" aria-label="Description Filter">
+							<span class="input-group-btn">
+								<button type="button" class="btn btn-default" aria-label="Description Sort">
+									<span class="glyphicon glyphicon-sort" aria-hidden="true"></span>
+								</button>
+							</span>
+						</div>
+					</td>
+					<td>
+						<div class="input-group">
+							<input type="text" class="form-control" name="details-filter" aria-label="Details Filter">
+							<span class="input-group-btn">
+								<button type="button" class="btn btn-default" aria-label="Details Sort">
+									<span class="glyphicon glyphicon-sort" aria-hidden="true"></span>
+								</button>
+							</span>
+						</div>
+					</td>
+					<td>
+						<div class="input-group">
+							<input type="text" class="form-control" name="email-filter" aria-label="Email Filter">
+							<span class="input-group-btn">
+								<button type="button" class="btn btn-default" aria-label="Email Sort">
+									<span class="glyphicon glyphicon-sort" aria-hidden="true"></span>
+								</button>
+							</span>
+						</div>
+					</td>
+					<td>
+						<div class="input-group">
+							<input type="checkbox" name="active-filter" aria-label="Active Filter">
+						</div>
+					</td>
+					<td>
+						<div class="input-group">
+							<input type="checkbox" name="active-filter" aria-label="Active Filter">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>Peter Parker</td>
+					<td>The Spider-man! My good friend!</td>
+					<td>Superhero mutant</td>
+					<td>spider-man@email.com</td>
+					<td class="col-boolean bool-true">True</td>
+					<td class="col-boolean bool-false">False</td>
+				</tr>
+				<tr>
+					<td>Henry McCoy</td>
+					<td>Beast</td>
+					<td>X-Men</td>
+					<td>Beast@xmen.com</td>
+					<td class="col-boolean bool-false">False</td>
+					<td class="col-boolean bool-true">True</td>
+				</tr>
+				<tr>
+					<td>James 'Logan' Howlett</td>
+					<td>Wolverine</td>
+					<td>X-Men</td>
+					<td>wolverine@xmen.com</td>
+					<td class="col-boolean bool-false">False</td>
+					<td class="col-boolean bool-true">True</td>
+				</tr>
+				<tr>
+					<td>Scott Summers</td>
+					<td>Cyclops</td>
+					<td>X-Men</td>
+					<td>Cyclops@xmen.com</td>
+					<td class="col-boolean bool-true">True</td>
+					<td class="col-boolean bool-false">False</td>
+				</tr>
+				<tr>
+					<td>Jean Grey</td>
+					<td>Phoenix</td>
+					<td>X-Men</td>
+					<td>jean.grey@xmen.com</td>
+					<td class="col-boolean bool-false">False</td>
+					<td class="col-boolean bool-true">True</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<div class="panel panel-info">
+		<div class="panel-heading">Grid #2</div>
+		<div class="panel-body">
+			<table class="table">
+				<thead>
+				<tr>
+					<th>Username</th>
+					<th>Email</th>
+					<th class="col-button">Delete</th>
+				</tr>
+				</thead>
+				<tfoot>
+				<tr>
+					<th>Username</th>
+					<th>Email</th>
+					<th class="col-button">Delete</th>
+				</tr>
+				</tfoot>
+				<tbody>
+				<tr>
+					<td>
+						<div class="input-group">
+							<input type="text" class="form-control" name="username-filter" aria-label="Username Filter">
+							<span class="input-group-btn">
+								<button type="button" class="btn btn-default" aria-label="Username Sort">
+									<span class="glyphicon glyphicon-sort" aria-hidden="true"></span>
+								</button>
+							</span>
+						</div>
+					</td>
+					<td>
+						<div class="input-group">
+							<input type="text" class="form-control" name="description-filter" aria-label="Description Filter">
+							<span class="input-group-btn">
+								<button type="button" class="btn btn-default" aria-label="Description Sort">
+									<span class="glyphicon glyphicon-sort" aria-hidden="true"></span>
+								</button>
+							</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>Peter Parker</td>
+					<td>spider-man@email.com</td>
+					<td class="col-button">
+						<button type="button" class="btn btn-danger btn-sm" aria-label="Left Align">
+							<span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+						</button>
+					</td>
+				</tr>
+				<tr>
+					<td>Henry McCoy</td>
+					<td>Beast@xmen.com</td>
+					<td class="col-button">
+						<button type="button" class="btn btn-danger btn-sm" aria-label="Left Align">
+							<span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+						</button>
+					</td>
+				</tr>
+				<tr>
+					<td>James 'Logan' Howlett</td>
+					<td>wolverine@xmen.com</td>
+					<td class="col-button">
+						<button type="button" class="btn btn-danger btn-sm" aria-label="Left Align">
+							<span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+						</button>
+					</td>
+				</tr>
+				<tr>
+					<td>Scott Summers</td>
+					<td>Cyclops@xmen.com</td>
+					<td class="col-button">
+						<button type="button" class="btn btn-danger btn-sm" aria-label="Left Align">
+							<span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+						</button>
+					</td>
+				</tr>
+				<tr>
+					<td>Jean Grey</td>
+					<td>jean.grey@xmen.com</td>
+					<td class="col-button">
+						<button type="button" class="btn btn-danger btn-sm" aria-label="Left Align">
+							<span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
+						</button>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+
