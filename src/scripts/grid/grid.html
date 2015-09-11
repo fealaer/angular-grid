@@ -1,0 +1,84 @@
+<table class="table">
+	<thead>
+	<tr>
+		<th>Username</th>
+		<th>Description</th>
+		<th>Details</th>
+		<th>Email</th>
+		<th>Active</th>
+		<th>Locked</th>
+	</tr>
+	</thead>
+	<tfoot>
+	<tr>
+		<th>Username</th>
+		<th>Description</th>
+		<th>Details</th>
+		<th>Email</th>
+		<th>Active</th>
+		<th>Locked</th>
+	</tr>
+	</tfoot>
+	<tbody>
+	<tr>
+		<td>
+			<div class="input-group">
+				<input type="text" class="form-control" name="username-filter" aria-label="Username Filter">
+							<span class="input-group-btn">
+								<button type="button" class="btn btn-default" aria-label="Username Sort">
+									<span class="glyphicon glyphicon-sort" aria-hidden="true"></span>
+								</button>
+							</span>
+			</div>
+		</td>
+		<td>
+			<div class="input-group">
+				<input type="text" class="form-control" name="description-filter" aria-label="Description Filter">
+							<span class="input-group-btn">
+								<button type="button" class="btn btn-default" aria-label="Description Sort">
+									<span class="glyphicon glyphicon-sort" aria-hidden="true"></span>
+								</button>
+							</span>
+			</div>
+		</td>
+		<td>
+			<div class="input-group">
+				<input type="text" class="form-control" name="details-filter" aria-label="Details Filter">
+							<span class="input-group-btn">
+								<button type="button" class="btn btn-default" aria-label="Details Sort">
+									<span class="glyphicon glyphicon-sort" aria-hidden="true"></span>
+								</button>
+							</span>
+			</div>
+		</td>
+		<td>
+			<div class="input-group">
+				<input type="text" class="form-control" name="email-filter" aria-label="Email Filter">
+							<span class="input-group-btn">
+								<button type="button" class="btn btn-default" aria-label="Email Sort">
+									<span class="glyphicon glyphicon-sort" aria-hidden="true"></span>
+								</button>
+							</span>
+			</div>
+		</td>
+		<td class="col-boolean">
+			<div class="input-group">
+				<input type="checkbox" name="active-filter" aria-label="Active Filter">
+			</div>
+		</td>
+		<td class="col-boolean">
+			<div class="input-group">
+				<input type="checkbox" name="active-filter" aria-label="Active Filter">
+			</div>
+		</td>
+	</tr>
+	<tr ng-repeat="entity in grid.data">
+		<td>{{entity.username}}</td>
+		<td>{{entity.description}}</td>
+		<td>{{entity.details}}</td>
+		<td>{{entity.email}}</td>
+		<td class="col-boolean" ng-class="{'bool-true': entity.active, 'bool-false': !entity.active}">{{entity.active}}</td>
+		<td class="col-boolean" ng-class="{'bool-true': entity.locked, 'bool-false': !entity.locked}">{{entity.locked}}</td>
+	</tr>
+	</tbody>
+</table>
