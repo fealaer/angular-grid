@@ -73,10 +73,10 @@
 		</td>
 	</tr>
 	<tr ng-repeat="entity in grid.data">
-		<td>{{entity.username}}</td>
-		<td>{{entity.description}}</td>
-		<td>{{entity.details}}</td>
-		<td>{{entity.email}}</td>
+		<td grid-column-string entity="entity" field="username"></td>
+		<td grid-column-string entity="entity" field="description"></td>
+		<td grid-column-string entity="entity" field="details"></td>
+		<td grid-column-string entity="entity" field="email"></td>
 		<td class="col-boolean" ng-class="{'bool-true': entity.active, 'bool-false': !entity.active}">{{entity.active}}</td>
 		<td class="col-boolean" ng-class="{'bool-true': entity.locked, 'bool-false': !entity.locked}">{{entity.locked}}</td>
 	</tr>
