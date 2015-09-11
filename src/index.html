@@ -14,9 +14,11 @@
 	<script src="scripts/grid/grid-column.directive.js"></script>
 	<script src="scripts/grid/grid-column-string.directive.js"></script>
 	<script src="scripts/grid/grid-column-boolean.directive.js"></script>
+	<script src="scripts/grid/grid-column-delete.directive.js"></script>
 	<script src="scripts/grid/grid-toolbar.directive.js"></script>
 	<script src="scripts/grid/grid-toolbar-string.directive.js"></script>
 	<script src="scripts/grid/grid-toolbar-boolean.directive.js"></script>
+	<script src="scripts/grid/grid-toolbar-delete.directive.js"></script>
 </head>
 <body ng-controller="GridPageCtrl as vm">
 <div class="container">
@@ -29,91 +31,7 @@
 	<div class="panel panel-info">
 		<div class="panel-heading">Grid #2</div>
 		<div class="panel-body">
-			<table class="table">
-				<thead>
-				<tr>
-					<th>Username</th>
-					<th>Email</th>
-					<th class="col-button">Delete</th>
-				</tr>
-				</thead>
-				<tfoot>
-				<tr>
-					<th>Username</th>
-					<th>Email</th>
-					<th class="col-button">Delete</th>
-				</tr>
-				</tfoot>
-				<tbody>
-				<tr>
-					<td>
-						<div class="input-group">
-							<input type="text" class="form-control" name="username-filter" aria-label="Username Filter">
-							<span class="input-group-btn">
-								<button type="button" class="btn btn-default" aria-label="Username Sort">
-									<span class="glyphicon glyphicon-sort" aria-hidden="true"></span>
-								</button>
-							</span>
-						</div>
-					</td>
-					<td>
-						<div class="input-group">
-							<input type="text" class="form-control" name="description-filter" aria-label="Description Filter">
-							<span class="input-group-btn">
-								<button type="button" class="btn btn-default" aria-label="Description Sort">
-									<span class="glyphicon glyphicon-sort" aria-hidden="true"></span>
-								</button>
-							</span>
-						</div>
-					</td>
-				</tr>
-				<tr>
-					<td>Peter Parker</td>
-					<td>spider-man@email.com</td>
-					<td class="col-button">
-						<button type="button" class="btn btn-danger btn-sm" aria-label="Left Align">
-							<span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
-						</button>
-					</td>
-				</tr>
-				<tr>
-					<td>Henry McCoy</td>
-					<td>Beast@xmen.com</td>
-					<td class="col-button">
-						<button type="button" class="btn btn-danger btn-sm" aria-label="Left Align">
-							<span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
-						</button>
-					</td>
-				</tr>
-				<tr>
-					<td>James 'Logan' Howlett</td>
-					<td>wolverine@xmen.com</td>
-					<td class="col-button">
-						<button type="button" class="btn btn-danger btn-sm" aria-label="Left Align">
-							<span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
-						</button>
-					</td>
-				</tr>
-				<tr>
-					<td>Scott Summers</td>
-					<td>Cyclops@xmen.com</td>
-					<td class="col-button">
-						<button type="button" class="btn btn-danger btn-sm" aria-label="Left Align">
-							<span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
-						</button>
-					</td>
-				</tr>
-				<tr>
-					<td>Jean Grey</td>
-					<td>jean.grey@xmen.com</td>
-					<td class="col-button">
-						<button type="button" class="btn btn-danger btn-sm" aria-label="Left Align">
-							<span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span>
-						</button>
-					</td>
-				</tr>
-				</tbody>
-			</table>
+			<grid data="vm.data" options="vm.grid2Options"></grid>
 		</div>
 	</div>
 </div>
