@@ -11,56 +11,7 @@
 	</tfoot>
 	<tbody>
 	<tr>
-		<td>
-			<div class="input-group">
-				<input type="text" class="form-control" name="username-filter" aria-label="Username Filter">
-							<span class="input-group-btn">
-								<button type="button" class="btn btn-default" aria-label="Username Sort">
-									<span class="glyphicon glyphicon-sort" aria-hidden="true"></span>
-								</button>
-							</span>
-			</div>
-		</td>
-		<td>
-			<div class="input-group">
-				<input type="text" class="form-control" name="description-filter" aria-label="Description Filter">
-							<span class="input-group-btn">
-								<button type="button" class="btn btn-default" aria-label="Description Sort">
-									<span class="glyphicon glyphicon-sort" aria-hidden="true"></span>
-								</button>
-							</span>
-			</div>
-		</td>
-		<td>
-			<div class="input-group">
-				<input type="text" class="form-control" name="details-filter" aria-label="Details Filter">
-							<span class="input-group-btn">
-								<button type="button" class="btn btn-default" aria-label="Details Sort">
-									<span class="glyphicon glyphicon-sort" aria-hidden="true"></span>
-								</button>
-							</span>
-			</div>
-		</td>
-		<td>
-			<div class="input-group">
-				<input type="text" class="form-control" name="email-filter" aria-label="Email Filter">
-							<span class="input-group-btn">
-								<button type="button" class="btn btn-default" aria-label="Email Sort">
-									<span class="glyphicon glyphicon-sort" aria-hidden="true"></span>
-								</button>
-							</span>
-			</div>
-		</td>
-		<td class="col-boolean">
-			<div class="input-group">
-				<input type="checkbox" name="active-filter" aria-label="Active Filter">
-			</div>
-		</td>
-		<td class="col-boolean">
-			<div class="input-group">
-				<input type="checkbox" name="active-filter" aria-label="Active Filter">
-			</div>
-		</td>
+		<td ng-repeat="colOptions in grid.options.cols" grid-toolbar options="colOptions"></td>
 	</tr>
 	<tr ng-repeat="entity in grid.data">
 		<td ng-repeat="colOptions in grid.options.cols" grid-column entity="entity" options="colOptions"></td>

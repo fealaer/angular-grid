@@ -57,7 +57,15 @@
           {field: 'active', type: 'boolean'},
           {field: 'locked', type: 'boolean'}
         ]
-      }
+      };
+
+      vm.grid2Options = {
+        cols: [
+          {field: 'username', type: 'string'},
+          {field: 'email', type: 'string'},
+          {field: 'delete', type: 'delete'}
+        ]
+      };
     });
 
 })();
