@@ -73,12 +73,7 @@
 		</td>
 	</tr>
 	<tr ng-repeat="entity in grid.data">
-		<td grid-column-string entity="entity" field="username"></td>
-		<td grid-column-string entity="entity" field="description"></td>
-		<td grid-column-string entity="entity" field="details"></td>
-		<td grid-column-string entity="entity" field="email"></td>
-		<td grid-column-boolean entity="entity" field="active"></td>
-		<td grid-column-boolean entity="entity" field="locked"></td>
+		<td ng-repeat="colOptions in grid.options.cols" grid-column entity="entity" options="colOptions"></td>
 	</tr>
 	</tbody>
 </table>

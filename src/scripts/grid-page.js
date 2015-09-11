@@ -47,6 +47,17 @@
           locked: true
         }
       ];
+
+      vm.grid1Options = {
+        cols: [
+          {field: 'username', type: 'string'},
+          {field: 'description', type: 'string'},
+          {field: 'details', type: 'string'},
+          {field: 'email', type: 'string'},
+          {field: 'active', type: 'boolean'},
+          {field: 'locked', type: 'boolean'}
+        ]
+      }
     });
 
 })();

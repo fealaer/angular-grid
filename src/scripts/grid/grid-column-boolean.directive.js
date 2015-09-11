@@ -8,7 +8,8 @@
 
   function GridColumnBooleanCtrl() {
     var vm = this;
-    vm.value = vm.entity[vm.field];
+    console.log(vm);
+    vm.value = vm.entity[vm.options.field];
   }
 
   function gridColumnBoolean() {
@@ -17,7 +18,7 @@
       require: '^grid',
       scope: {
         entity: '=',
-        field: '@'
+        options: '='
       },
       controller: 'GridColumnBooleanCtrl',
       controllerAs: 'vm',

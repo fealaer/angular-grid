@@ -13,7 +13,8 @@
     return {
       restrict: 'E',
       scope: {
-        data: '='
+        data: '=',
+        options: '='
       },
       controller: 'GridCtrl',
       controllerAs: 'grid',

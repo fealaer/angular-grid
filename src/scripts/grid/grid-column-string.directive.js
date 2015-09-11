@@ -8,7 +8,7 @@
 
   function GridColumnStringCtrl() {
     var vm = this;
-    vm.value = vm.entity[vm.field];
+    vm.value = vm.entity[vm.options.field];
   }
 
   function gridColumnString() {
@@ -17,8 +17,7 @@
       require: '^grid',
       scope: {
         entity: '=',
-        field: '@',
-        editable: '='
+        options: '='
       },
       controller: 'GridColumnStringCtrl',
       controllerAs: 'vm',
