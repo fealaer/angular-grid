@@ -1,22 +1,12 @@
 <table class="table">
 	<thead>
 	<tr>
-		<th>Username</th>
-		<th>Description</th>
-		<th>Details</th>
-		<th>Email</th>
-		<th>Active</th>
-		<th>Locked</th>
+		<th ng-repeat="colOptions in grid.options.cols">{{colOptions.field}}</th>
 	</tr>
 	</thead>
 	<tfoot>
 	<tr>
-		<th>Username</th>
-		<th>Description</th>
-		<th>Details</th>
-		<th>Email</th>
-		<th>Active</th>
-		<th>Locked</th>
+		<th ng-repeat="colOptions in grid.options.cols">{{colOptions.field}}</th>
 	</tr>
 	</tfoot>
 	<tbody>

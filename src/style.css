@@ -7,6 +7,10 @@ thead, tfoot {
     background-color: #f5f5f5;
 }
 
+thead th, tfoot th {
+    text-transform: capitalize;
+}
+
 td.col-button {
     text-align: right;
 }

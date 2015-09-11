@@ -8,7 +8,6 @@
 
   function GridColumnBooleanCtrl() {
     var vm = this;
-    console.log(vm);
     vm.value = vm.entity[vm.options.field];
   }
 
