@@ -42,3 +42,12 @@ td.col-boolean .input-group input {
     transform: translateY(50%);
     margin: 0;
 }
+
+.non-select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

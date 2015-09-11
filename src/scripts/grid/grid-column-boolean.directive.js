@@ -8,7 +8,10 @@
 
   function GridColumnBooleanCtrl() {
     var vm = this;
-    vm.value = vm.entity[vm.options.field];
+
+    vm.toggleValue = function () {
+      vm.entity[vm.options.field] = !vm.entity[vm.options.field];
+    }
   }
 
   function gridColumnBoolean() {
