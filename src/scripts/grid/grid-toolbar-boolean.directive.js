@@ -9,6 +9,10 @@
   function GridToolbarBooleanCtrl() {
     var vm = this;
 
+    vm.isFilterable = function () {
+      return vm.options.filterable !== undefined ? vm.options.filterable : true;
+    };
+
     vm.isFieldEqualTo = function (value) {
       return vm.filter[vm.options.field] === value;
     };
@@ -22,6 +26,9 @@
     };
 
     vm.buttonColorClass = function (value, buttonClass) {
+      if (!vm.isFilterable()) {
+        return 'btn-default btn-disabled';
+      }
       return vm.isFieldEqualTo(value) ? buttonClass : 'btn-default';
     };
   }

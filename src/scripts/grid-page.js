@@ -67,7 +67,7 @@
           {field: 'description', type: 'string', editable: true, validator: descriptionValidator},
           {field: 'details', type: 'string', editable: true, validator: detailsValidator},
           {field: 'email', type: 'string', editable: true, validator: emailValidator},
-          {field: 'active', type: 'boolean', editable: true},
+          {field: 'active', type: 'boolean', editable: true, filterable: false},
           {field: 'locked', type: 'boolean', editable: true}
         ]
       };
@@ -75,8 +75,8 @@
       vm.grid2Options = {
         name: 'Grid #2',
         cols: [
-          {field: 'username', type: 'string'},
-          {field: 'email', type: 'string'},
+          {field: 'username', type: 'string', filterable: false},
+          {field: 'email', type: 'string', sortable: false},
           {field: 'delete', type: 'delete'}
         ]
       };

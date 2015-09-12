@@ -24,6 +24,14 @@
       });
     }
 
+    vm.isFilterable = function () {
+      return vm.options.filterable !== undefined ? vm.options.filterable : true;
+    };
+
+    vm.isSortable = function () {
+      return vm.options.sortable !== undefined ? vm.options.sortable : true;
+    };
+
     vm.isOrderedByThis = function () {
       return vm.order.predicate === vm.options.field;
     };

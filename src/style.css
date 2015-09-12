@@ -76,3 +76,8 @@ td.col-boolean .input-group input {
     white-space: nowrap;
     vertical-align: middle;
 }
+
+.btn-default:disabled, .btn-default:disabled:hover, label.btn-disabled, label.btn-disabled:hover {
+    background-color: #eee;
+    opacity: 1;
+}
