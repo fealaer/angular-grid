@@ -9,8 +9,14 @@
   function GridColumnBooleanCtrl() {
     var vm = this;
 
+    vm.isEditable = function () {
+      return vm.options.editable || false;
+    };
+
     vm.toggleValue = function () {
-      vm.entity[vm.options.field] = !vm.entity[vm.options.field];
+      if (vm.isEditable()) {
+        vm.entity[vm.options.field] = !vm.entity[vm.options.field];
+      }
     };
 
     vm.colColorClass = function () {
