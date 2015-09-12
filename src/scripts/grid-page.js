@@ -48,15 +48,27 @@
         }
       ];
 
+      var descriptionValidator = function (val) {
+        return Math.random() <= 0.8;
+      };
+
+      var detailsValidator = function (val) {
+        return val.toLowerCase() !== 'fuck';
+      };
+
+      var emailValidator = function (val) {
+        return ~val.indexOf('@');
+      };
+
       vm.grid1Options = {
         name: 'Grid #1',
         cols: [
           {field: 'username', type: 'string'},
-          {field: 'description', type: 'string', editable: true},
-          {field: 'details', type: 'string', editable: true},
-          {field: 'email', type: 'string'},
+          {field: 'description', type: 'string', editable: true, validator: descriptionValidator},
+          {field: 'details', type: 'string', editable: true, validator: detailsValidator},
+          {field: 'email', type: 'string', editable: true, validator: emailValidator},
           {field: 'active', type: 'boolean', editable: true},
-          {field: 'locked', type: 'boolean'}
+          {field: 'locked', type: 'boolean', editable: true}
         ]
       };
 
