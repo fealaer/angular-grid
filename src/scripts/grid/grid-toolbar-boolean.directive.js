@@ -9,17 +9,21 @@
   function GridToolbarBooleanCtrl() {
     var vm = this;
 
-    vm.isEqualTo = function (value) {
+    vm.isFieldEqualTo = function (value) {
       return vm.filter[vm.options.field] === value;
     };
 
     vm.setFilter = function (value) {
-      if (vm.isEqualTo(value)) {
+      if (vm.isFieldEqualTo(value)) {
         delete vm.filter[vm.options.field];
       } else {
         vm.filter[vm.options.field] = value;
       }
-    }
+    };
+
+    vm.buttonColorClass = function (value, buttonClass) {
+      return vm.isFieldEqualTo(value) ? buttonClass : 'btn-default';
+    };
   }
 
   function gridToolbarBoolean() {

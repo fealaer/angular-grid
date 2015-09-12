@@ -1,10 +1,10 @@
 <td class="col-boolean">
 		<div class="btn-group" data-toggle="buttons">
-			<label class="btn" ng-class="{'btn-default': !vm.isEqualTo(true), 'btn-success': vm.isEqualTo(true)}">
+			<label class="btn" ng-class="vm.buttonColorClass(true, 'btn-success')">
 				<input type="checkbox" ng-click="vm.setFilter(true)">
 				<span class="glyphicon glyphicon-ok-circle"></span>
 			</label>
-			<label class="btn" ng-class="{'btn-default': !vm.isEqualTo(false), 'btn-danger': vm.isEqualTo(false)}">
+			<label class="btn" ng-class="vm.buttonColorClass(false, 'btn-danger')">
 				<input type="checkbox" ng-click="vm.setFilter(false)">
 				<span class="glyphicon glyphicon-ban-circle"></span>
 			</label>
