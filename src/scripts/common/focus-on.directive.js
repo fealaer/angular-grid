@@ -5,9 +5,9 @@
     .module('common')
     .directive('focusOn', ['$timeout', focusOn]);
 
-
   function focusOn($timeout) {
     return {
+      restrict: "A",
       scope: {
         trigger: '=focusOn'
       },
@@ -15,7 +15,7 @@
         scope.$watch('trigger', function (value) {
           if (value === true) {
             $timeout(function () {
-              console.log(element[0].focus());
+              element[0].focus();
             }, 0, false);
           }
         });
