@@ -1,1 +1,1 @@
-<td class="col-boolean non-select" ng-class="{'bool-true': vm.entity[vm.options.field], 'bool-false': !vm.entity[vm.options.field]}" ng-click="vm.toggleValue()">{{vm.entity[vm.options.field]}}</td>
+<td class="col-boolean non-select" ng-class="vm.colColorClass()" ng-click="vm.toggleValue()">{{vm.entity[vm.options.field]}}</td>

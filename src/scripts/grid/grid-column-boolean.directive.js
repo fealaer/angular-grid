@@ -11,6 +11,10 @@
 
     vm.toggleValue = function () {
       vm.entity[vm.options.field] = !vm.entity[vm.options.field];
+    };
+
+    vm.colColorClass = function () {
+      return vm.entity[vm.options.field] ? 'bool-true' : 'bool-false';
     }
   }
 
