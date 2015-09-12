@@ -52,10 +52,10 @@
         name: 'Grid #1',
         cols: [
           {field: 'username', type: 'string'},
-          {field: 'description', type: 'string'},
-          {field: 'details', type: 'string'},
+          {field: 'description', type: 'string', editable: true},
+          {field: 'details', type: 'string', editable: true},
           {field: 'email', type: 'string'},
-          {field: 'active', type: 'boolean'},
+          {field: 'active', type: 'boolean', editable: true},
           {field: 'locked', type: 'boolean'}
         ]
       };
