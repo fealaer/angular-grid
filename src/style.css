@@ -51,3 +51,7 @@ td.col-boolean .input-group input {
     -ms-user-select: none;
     user-select: none;
 }
+
+.input-group .form-control {
+    width: 90%
+}

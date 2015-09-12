@@ -9,12 +9,20 @@
   function GridCtrl() {
     var vm = this;
 
+    function init () {
+      if (!vm.options.filter) {
+        vm.options.filter = {};
+      }
+    }
+
     vm.remove = function (entity) {
       var i = vm.data.indexOf(entity);
       if (~i) {
         vm.data.splice(i, 1);
       }
-    }
+    };
+
+    init();
   }
 
   function grid() {

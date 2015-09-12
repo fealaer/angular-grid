@@ -13,7 +13,8 @@
     return {
       restrict: 'A',
       scope: {
-        options: '='
+        options: '=',
+        filter: '='
       },
       controller: 'GridToolbarCtrl',
       controllerAs: 'vm',
@@ -24,7 +25,7 @@
     };
 
     function link (scope, element, attr, vm) {
-      var template = '<td grid-toolbar-' + vm.options.type + ' field="' + vm.options.field + '"></div>';
+      var template = '<td grid-toolbar-' + vm.options.type + ' filter="vm.filter" options="vm.options"></div>';
       element.replaceWith($compile(template)(scope));
     }
   }

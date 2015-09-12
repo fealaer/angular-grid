@@ -1,5 +1,13 @@
 <td class="col-boolean">
-	<div class="input-group">
-		<input type="checkbox" name="filter">
+		<div class="btn-group" data-toggle="buttons">
+			<label class="btn" ng-class="{'btn-default': !vm.isEqualTo(true), 'btn-success': vm.isEqualTo(true)}">
+				<input type="checkbox" ng-click="vm.setFilter(true)">
+				<span class="glyphicon glyphicon-ok-circle"></span>
+			</label>
+			<label class="btn" ng-class="{'btn-default': !vm.isEqualTo(false), 'btn-danger': vm.isEqualTo(false)}">
+				<input type="checkbox" ng-click="vm.setFilter(false)">
+				<span class="glyphicon glyphicon-ban-circle"></span>
+			</label>
+		</div>
 	</div>
 </td>
