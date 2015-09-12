@@ -11,9 +11,9 @@
 	</tfoot>
 	<tbody>
 	<tr>
-		<td ng-repeat="colOptions in grid.options.cols" grid-toolbar options="colOptions" filter="grid.options.filter"></td>
+		<td ng-repeat="colOptions in grid.options.cols" grid-toolbar options="colOptions" filter="grid.options.filter" order="grid.options.order"></td>
 	</tr>
-	<tr ng-repeat="entity in grid.data | filter:grid.options.filter">
+	<tr ng-repeat="entity in grid.data | filter:grid.options.filter | orderBy:grid.options.order.predicate:grid.options.order.reverse">
 		<td ng-repeat="colOptions in grid.options.cols" grid-column entity="entity" options="colOptions"></td>
 	</tr>
 	</tbody>

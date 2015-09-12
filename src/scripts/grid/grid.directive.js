@@ -13,6 +13,13 @@
       if (!vm.options.filter) {
         vm.options.filter = {};
       }
+
+      if (!vm.options.order) {
+        vm.options.order = {
+          predicate: vm.options.cols[0].field,
+          reverse: false
+        };
+      }
     }
 
     vm.remove = function (entity) {
@@ -20,6 +27,12 @@
       if (~i) {
         vm.data.splice(i, 1);
       }
+    };
+
+    vm.orderBy = function(predicate) {
+      var order = vm.options.order;
+      order.reverse = (order.predicate === predicate) ? !order.reverse : false;
+      order.predicate = predicate;
     };
 
     init();

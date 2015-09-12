@@ -2,8 +2,8 @@
 	<div class="input-group">
 		<input type="text" class="form-control" name="filter">
 		<span class="input-group-btn">
-			<button type="button" class="btn btn-default" name="sort">
-				<span class="glyphicon glyphicon-sort"></span>
+			<button type="button" class="btn" ng-class="vm.buttonColorClass()" name="sort" ng-click="vm.setOrder()">
+				<span class="glyphicon" ng-class="vm.buttonIconClass()"></span>
 			</button>
 		</span>
 	</div>
