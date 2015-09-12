@@ -8,7 +8,42 @@
 
   function GridColumnStringCtrl() {
     var vm = this;
-    vm.value = vm.entity[vm.options.field];
+
+    function init () {
+      vm.mode = 'view';
+
+      Object.defineProperty(vm, "value", {
+        get : function () {
+          return vm.entity[vm.options.field];
+        },
+        set : function (val) {
+          vm.entity[vm.options.field] = val;
+          vm.changeMode('view');
+        }
+      });
+    }
+
+    vm.changeMode = function (mode) {
+      if (vm.isEditable()) {
+        vm.mode = mode;
+      }
+    };
+
+    vm.isEditable = function () {
+      return vm.options.editable || false;
+    };
+
+    vm.isEditMode = function () {
+      return vm.mode === 'edit';
+    };
+
+    vm.onEnter = function (event) {
+      if (event.keyCode === 13 ) {
+        event.target.blur();
+      }
+    };
+
+    init();
   }
 
   function gridColumnString() {
