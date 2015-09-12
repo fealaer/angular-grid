@@ -9,6 +9,21 @@
   function GridToolbarStringCtrl() {
     var vm = this;
 
+    function init () {
+      if (!vm.filter[vm.options.field]) {
+        vm.filter[vm.options.field] = '';
+      }
+
+      vm.local = {
+        get filter () {
+          return vm.filter[vm.options.field];
+        },
+        set filter (str) {
+          vm.filter[vm.options.field] = str;
+        }
+      };
+    }
+
     vm.isOrderedByThis = function () {
       return vm.order.predicate === vm.options.field;
     };
@@ -28,6 +43,16 @@
     vm.buttonColorClass = function () {
       return vm.isOrderedByThis() ? 'btn-info' : 'btn-default';
     };
+
+    vm.isFilterEmpty = function () {
+      return !!vm.local.filter;
+    };
+
+    vm.inputColorClass = function () {
+      return vm.isFilterEmpty() ? 'input-info' : '' ;
+    };
+
+    init();
   }
 
   function gridToolbarString() {
