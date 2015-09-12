@@ -17,7 +17,11 @@
           return vm.entity[vm.options.field];
         },
         set : function (val) {
-          vm.entity[vm.options.field] = val;
+          if (!vm.options.validator || vm.options.validator(val)) {
+            vm.entity[vm.options.field] = val;
+          } else {
+            alert('This value does not allowed!');
+          }
           vm.changeMode('view');
         }
       });
