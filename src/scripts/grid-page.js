@@ -49,6 +49,7 @@
       ];
 
       vm.grid1Options = {
+        name: 'Grid #1',
         cols: [
           {field: 'username', type: 'string'},
           {field: 'description', type: 'string'},
@@ -60,6 +61,7 @@
       };
 
       vm.grid2Options = {
+        name: 'Grid #2',
         cols: [
           {field: 'username', type: 'string'},
           {field: 'email', type: 'string'},

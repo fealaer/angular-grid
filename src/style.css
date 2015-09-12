@@ -61,3 +61,18 @@ td.col-boolean .input-group input {
     background-color: #5bc0de;
     border-color: #46b8da;
 }
+
+.btn-toolbar {
+    margin-bottom: 15px;
+}
+
+.grid-header {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+}

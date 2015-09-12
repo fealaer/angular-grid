@@ -9,7 +9,7 @@
   function GridCtrl() {
     var vm = this;
 
-    function init () {
+    function init() {
       if (!vm.options.filter) {
         vm.options.filter = {};
       }
@@ -20,6 +20,11 @@
           reverse: false
         };
       }
+
+      vm.default = {
+        filter: angular.copy(vm.options.filter),
+        order: angular.copy(vm.options.order)
+      };
     }
 
     vm.remove = function (entity) {
@@ -29,10 +34,32 @@
       }
     };
 
-    vm.orderBy = function(predicate) {
+    vm.orderBy = function (predicate) {
       var order = vm.options.order;
       order.reverse = (order.predicate === predicate) ? !order.reverse : false;
       order.predicate = predicate;
+    };
+
+    vm.resetOrder = function () {
+      vm.options.order = angular.copy(vm.default.order);
+    };
+
+    vm.resetFilter = function () {
+      vm.options.filter = angular.copy(vm.default.filter);
+    };
+
+    vm.isFilterable = function () {
+      var filtered = vm.options.cols.filter(function (entity) {
+        return entity.type === 'string' || entity.type === 'boolean';
+      });
+      return !!filtered.length;
+    };
+
+    vm.isSortable = function () {
+      var filtered = vm.options.cols.filter(function (entity) {
+        return entity.type === 'string';
+      });
+      return !!filtered.length;
     };
 
     init();
@@ -46,7 +73,7 @@
         options: '='
       },
       controller: 'GridCtrl',
-      controllerAs: 'grid',
+      controllerAs: 'vm',
       transclude: true,
       replace: false,
       bindToController: true,
