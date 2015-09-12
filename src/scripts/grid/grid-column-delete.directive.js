@@ -22,7 +22,12 @@
       bindToController: true,
       transclude: true,
       replace: true,
-      templateUrl: 'scripts/grid/grid-column-delete.html'
+      templateUrl: 'scripts/grid/grid-column-delete.html',
+      link: function(scope, element, attrs, vm) {
+        scope.vm.remove = function() {
+          vm.remove(scope.vm.entity);
+        };
+      }
     };
   }
 

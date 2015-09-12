@@ -7,6 +7,14 @@
     .directive('grid', grid);
 
   function GridCtrl() {
+    var vm = this;
+
+    vm.remove = function (entity) {
+      var i = vm.data.indexOf(entity);
+      if (~i) {
+        vm.data.splice(i, 1);
+      }
+    }
   }
 
   function grid() {
