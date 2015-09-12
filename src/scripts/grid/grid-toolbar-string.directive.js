@@ -14,14 +14,14 @@
         vm.filter[vm.options.field] = '';
       }
 
-      vm.local = {
-        get filter () {
+      Object.defineProperty(vm, "filterProxy", {
+        get : function () {
           return vm.filter[vm.options.field];
         },
-        set filter (str) {
-          vm.filter[vm.options.field] = str;
+        set : function (val) {
+          vm.filter[vm.options.field] = val;
         }
-      };
+      });
     }
 
     vm.isOrderedByThis = function () {
@@ -45,7 +45,7 @@
     };
 
     vm.isFilterEmpty = function () {
-      return !!vm.local.filter;
+      return !!vm.filterProxy;
     };
 
     vm.inputColorClass = function () {
