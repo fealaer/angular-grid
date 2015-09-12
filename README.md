@@ -1,3 +1,7 @@
+## Result ##
+[View on Plunker](http://run.plnkr.co/xxvvAw6wCxLibwTY/)
+
+----------
 ## Background information ##
 we want to have a flexible data grid. Extendable and reusable
 
